@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
+.targeta {
+    border: solid 4px gainsboro;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+aside {
+    padding: 0.5rem;
+    border: solid 4px gray;
+    background-color: lemonchiffon;
+}
