@@ -1,6 +1,10 @@
 <main class="main">
   <app-filtre-obres (aplicarFiltres)="aplicarFiltres($event)"></app-filtre-obres>
-  <app-llista-obres [obres]="obresVisibles" [obraSeleccionada]="obraSeleccionada" (seleccionar)="selecciona($event)"></app-llista-obres>
+  @if (obresVisibles.length === 0) {<p>No s'han trobat obres.</p>}
+  @else {
+    <p>{{obresVisibles.length}} resultats trobats</p>
+    <app-llista-obres [obres]="obresVisibles" [obraSeleccionada]="obraSeleccionada" (seleccionar)="selecciona($event)"></app-llista-obres>
+  }
 </main>
 
 <router-outlet />
