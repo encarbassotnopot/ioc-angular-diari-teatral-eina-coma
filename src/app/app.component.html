@@ -1,20 +1,6 @@
 <main class="main">
-  <div>
-    <h1>{{ nomApp() }}</h1>
-    <p>Aquesta app permet fer un seguiment de les obres teatrals vistes. Desenvolupada per Eina Coma.</p>
-  </div>
-  <div class="targeta">
-    <h2>Informació miscel·lània</h2>
-    <ul>
-      <li>Versió de nodejs: 24.21.0</li>
-      <li>Versió de npm: 11.19.0</li>
-      <li>Versió d'angular: 22.2.0</li>
-    </ul>
-  </div>
-  <aside>
-    <p>Aquest projecte ha estat creat per l'assignatura de Programació Avançada (OA1) del CFGS en DAW de l'IOC.</p>
-    <p>Projecte base llest.</p>
-  </aside>
+  <app-filtre-obres></app-filtre-obres>
+  <app-llista-obres [obres]="obres"></app-llista-obres>
 </main>
 
 <router-outlet />

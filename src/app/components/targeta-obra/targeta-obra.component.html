@@ -1,0 +1,7 @@
+<article class="targeta" >
+    <h3>{{obra.titol}}</h3>
+    <app-etiqueta-categoria [categoria]="obra.categoria"></app-etiqueta-categoria>
+    <p>{{obra.descripcio}}</p>
+    <p>Vista en data: {{obra.data.toLocaleDateString("ca-ES")}}</p>
+    @if (obra.valoracio) {<p>{{obra.valoracio}}/5</p>}
+</article>

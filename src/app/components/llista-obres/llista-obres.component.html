@@ -1,0 +1,5 @@
+<section class="llista">
+    @for (obra of obres; track obra.id) {
+        <app-targeta-obra [obra]="obra" (click)="seleccionar.emit(obra)"></app-targeta-obra>
+    }
+</section>

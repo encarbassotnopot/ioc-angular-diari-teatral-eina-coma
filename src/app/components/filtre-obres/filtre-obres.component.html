@@ -1,0 +1,13 @@
+<form #formFilters="ngForm" (ngSubmit)="aplica()">
+<label for="text">Cerca: </label>
+<input type="text" id="text" name="text" required minlength="3" [(ngModel)]="text" #textCtrl="ngModel">
+<label for="categoria">Categoria: </label>
+<select name="categoria" id="categoria">
+    <option>Qualsevol</option>
+    <option value="Teatre">Teatre</option>
+    <option value="Òpera">Òpera</option>
+    <option value="Musical">Musical</option>
+</select>
+<button type="submit">Filtra</button>
+<button type="button" (click)="reestableix()">Reestableix</button>
+</form>

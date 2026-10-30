@@ -2,10 +2,10 @@ export type CategoriaObra = "Teatre" | "Òpera" | "Musical";
 
 export interface Obra {
     id: number
-    títol: string
-    descripció: string
+    titol: string
+    descripcio: string
     categoria: CategoriaObra
     data: Date
-    valoració?: number
-    vista: boolean
+    valoracio?: number
+    destacada?: boolean
 }
