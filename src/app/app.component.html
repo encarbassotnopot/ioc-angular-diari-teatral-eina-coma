@@ -1,6 +1,6 @@
 <main class="main">
-  <app-filtre-obres></app-filtre-obres>
-  <app-llista-obres [obres]="obres"></app-llista-obres>
+  <app-filtre-obres (aplicarFiltres)="aplicarFiltres($event)"></app-filtre-obres>
+  <app-llista-obres [obres]="obresVisibles" [obraSeleccionada]="obraSeleccionada" (seleccionar)="selecciona($event)"></app-llista-obres>
 </main>
 
 <router-outlet />

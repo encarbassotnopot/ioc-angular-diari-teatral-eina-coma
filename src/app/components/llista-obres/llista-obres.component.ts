@@ -11,5 +11,6 @@ import { TargetaObraComponent } from '../targeta-obra/targeta-obra.component';
 
 export class LlistaObresComponent {
   @Input({required: true}) obres!: Obra[];
+  @Input() obraSeleccionada?: Obra;
   @Output() seleccionar = new EventEmitter<Obra>();
 }

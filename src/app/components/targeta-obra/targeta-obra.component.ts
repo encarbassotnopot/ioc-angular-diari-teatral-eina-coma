@@ -10,5 +10,6 @@ import { EtiquetaCategoriaComponent } from '../etiqueta-categoria/etiqueta-categ
 })
 export class TargetaObraComponent {
   @Input({required: true}) obra!: Obra;
+  @Input() seleccionada = false;
   @Output() seleccionar = new EventEmitter<Obra>();
 }

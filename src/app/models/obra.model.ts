@@ -7,5 +7,4 @@ export interface Obra {
     categoria: CategoriaObra
     data: Date
     valoracio?: number
-    destacada?: boolean
 }
