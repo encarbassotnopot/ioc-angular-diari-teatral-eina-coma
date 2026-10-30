@@ -12,6 +12,7 @@ import { CategoriaObra, Obra } from './models/obra.model';
   templateUrl: './app.component.html',
 })
 export class App {
+
   obresVisibles = [...OBRES];
   obraSeleccionada?: Obra;
 

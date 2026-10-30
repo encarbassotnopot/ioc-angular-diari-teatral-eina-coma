@@ -1,14 +1,14 @@
 <form #formFilters="ngForm" (ngSubmit)="aplica()">
 <label for="text">Cerca: </label>
-<input type="text" id="text" name="text" required minlength="3" [(ngModel)]="text" #textCtrl="ngModel">
-@if ((textCtrl.dirty && !textCtrl.touched) && textCtrl.invalid) {<p class="error">Escriviu 3 caràcters com a mínim.</p>}
+<input type="text" id="text" name="text" required minlength="3" [(ngModel)]="text" #textCtrl="ngModel" aria-describedby="error-cerca">
+@if ((textCtrl.dirty && !textCtrl.touched) && textCtrl.invalid) {<p class="error" id="error-cerca" role="alert">Escriviu 3 caràcters com a mínim.</p>}
+<label for="categoria">Categoria: </label>
 <select name="categoria" id="categoria" [(ngModel)]="categoria">
     <option [ngValue]="undefined">Qualsevol</option>
     <option value="Teatre">Teatre</option>
     <option value="Òpera">Òpera</option>
     <option value="Musical">Musical</option>
 </select>
-<label for="categoria">Categoria: </label>
 <button type="submit" [disabled]="formFilters.invalid">Filtra</button>
 <button type="button" (click)="reestableix()">Reestableix</button>
 </form>

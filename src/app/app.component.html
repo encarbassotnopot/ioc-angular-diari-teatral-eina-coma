@@ -1,8 +1,8 @@
-<main class="main">
+<main class="main" id="contingut">
   <app-filtre-obres (aplicarFiltres)="aplicarFiltres($event)"></app-filtre-obres>
-  @if (obresVisibles.length === 0) {<p>No s'han trobat obres.</p>}
+  @if (obresVisibles.length === 0) {<p role="status">No s'han trobat obres.</p>}
   @else {
-    <p>{{obresVisibles.length}} resultats trobats</p>
+    <p role="status">{{obresVisibles.length}} resultats trobats</p>
     <app-llista-obres [obres]="obresVisibles" [obraSeleccionada]="obraSeleccionada" (seleccionar)="selecciona($event)"></app-llista-obres>
   }
 </main>
