@@ -14,13 +14,13 @@ Permet dur un registre de les obres de teatre vistes.
 
 ## Com crear i executar el projecte
 ```npm i && ng serve```
+```npm run api```
 
 ## Estat del projecte
-EAC2 Completat:
-- Creats components d'etiqueta de categoria d'obra, targeta d'obra i llista de targetes.
-- Descripció de les obres amagada, amb l'opció de mostrar-ne els detalls al premer el botó corresponent.
-- Filtre de llista funcional amb FormsModule i [(ngModule)]. Permet la cerca de títols i el filtratge opcional per categoria.
-- Comptador de resultats i missatges d'error.
+EAC3 Completat:
+- Connexió amb API Json local, prescindint de dades hardcodejades.
+- Actualització del filtre amb formulari reactiu i validació de resultats asíncrona usant la nova API.
+- Serveis per a connexió amb la API i activitat asíncrona, així com models i adaptadors.
 
 ## Enllaç del repositori
 [https://github.com/encarbassotnopot/ioc-angular-diari-teatral-eina-coma](https://github.com/encarbassotnopot/ioc-angular-diari-teatral-eina-coma)
