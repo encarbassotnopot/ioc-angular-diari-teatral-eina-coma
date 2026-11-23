@@ -18,7 +18,7 @@ function valoracioSegura(valor: unknown): number | undefined {
   else return n;
 }
 
-export function adaptarElementApi(apiObra: ObraApiResponse): ObraCataleg {
+export function adaptarObraApi(apiObra: ObraApiResponse): ObraCataleg {
   return {
     id: Number(apiObra.id),
     titol: (apiObra.titol ?? '').trim(),
@@ -30,7 +30,11 @@ export function adaptarElementApi(apiObra: ObraApiResponse): ObraCataleg {
   };
 }
 
-export function prepararElementApi(nova: NovaObra): Omit<ObraApiResponse, "id"> {
+export function adaptarObresApi(apiObres: ObraApiResponse[]): ObraCataleg[] {
+  return apiObres.map(adaptarObraApi);
+}
+
+export function prepararObraApi(nova: NovaObra): Omit<ObraApiResponse, "id"> {
   return {
     titol: nova.titol.trim(),
     descripcio: nova.descripcio,
@@ -39,10 +43,6 @@ export function prepararElementApi(nova: NovaObra): Omit<ObraApiResponse, "id"> 
     valoracio: nova.valoracio,
     destacada: nova.esDestacada,
   };
-}
-
-export function adaptarObresApi(apiObres: ObraApiResponse[]): ObraCataleg[] {
-  return apiObres.map(adaptarElementApi);
 }
 
 export function obraBuida(): ObraCataleg {

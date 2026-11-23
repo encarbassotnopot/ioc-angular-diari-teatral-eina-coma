@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http'
 import { Service, inject, signal } from '@angular/core';
 import { Observable, Subject, catchError, map, of, switchMap, tap } from 'rxjs';
 
-import { adaptarElementApi, adaptarObresApi, prepararElementApi } from '../adaptadors/obra.adaptador';
+import { adaptarObraApi, adaptarObresApi, prepararObraApi } from '../adaptadors/obra.adaptador';
 import { ObraApiResponse, ObraCataleg, EstatObres, NovaObra } from '../models/obra.model';
 import { environment } from '../../environments/environment';
 
@@ -65,8 +65,8 @@ export class ObraService {
 
   /** Crea un element nou amb POST i, si va bé, refresca el llistat */
   crearElement(nova: NovaObra): Observable<ObraCataleg> {
-    return this.http.post<ObraApiResponse>(this.apiUrl, prepararElementApi(nova)).pipe(
-      map(adaptarElementApi),
+    return this.http.post<ObraApiResponse>(this.apiUrl, prepararObraApi(nova)).pipe(
+      map(adaptarObraApi),
       tap(() => this.reintentar())
     );
   }

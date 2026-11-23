@@ -9,6 +9,7 @@
         @case ('error') {
             <p>Error</p>
             <p>{{obraService.estat().error}}</p>
+            <button type="button" (click)="reintentar()">Reintentar</button>
         }
         @case ('exit') {
             <app-filtre-obres (cercaEnviada)="onCerca($event)"></app-filtre-obres>
