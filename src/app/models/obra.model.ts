@@ -32,3 +32,5 @@ export interface EstatObres {
   elements: ObraCataleg[];
   error?: string;
 }
+
+export type NovaObra = Omit<ObraCataleg, 'id'>

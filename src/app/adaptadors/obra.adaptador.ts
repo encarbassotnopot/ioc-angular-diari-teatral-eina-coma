@@ -1,4 +1,4 @@
-import { ObraCataleg, ObraApiResponse, CategoriaObra } from '../models/obra.model';
+import { ObraCataleg, ObraApiResponse, CategoriaObra, NovaObra } from '../models/obra.model';
 
 const CATEGORIES_NORMALITZADES: Record<string, CategoriaObra> = {
   'Teatre': 'Teatre',
@@ -27,6 +27,17 @@ export function adaptarElementApi(apiObra: ObraApiResponse): ObraCataleg {
     data: new Date(apiObra.data),
     valoracio: valoracioSegura(apiObra.valoracio),
     esDestacada: apiObra.destacada === true,
+  };
+}
+
+export function prepararElementApi(nova: NovaObra): Omit<ObraApiResponse, "id"> {
+  return {
+    titol: nova.titol.trim(),
+    descripcio: nova.descripcio,
+    categoria: nova.categoria,
+    data: nova.data.toISOString().split('T')[0],
+    valoracio: nova.valoracio,
+    destacada: nova.esDestacada,
   };
 }
 
