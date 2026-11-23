@@ -14,7 +14,6 @@ import { CriterisCerca, ObraService } from './services/obra.service';
 })
 export class App {
 
-  obresVisibles = [...OBRES];
   obraSeleccionada?: ObraCataleg;
 
   readonly obraService = inject(ObraService);
@@ -27,12 +26,6 @@ export class App {
   }
   onCerca(criteris: CriterisCerca): void {
     this.obraService.cercar(criteris);
-  }
-
-  aplicarFiltres = (f: { text: string, categoria?: CategoriaObra }) => {
-    const text = f.text.trim().toLocaleLowerCase()
-    this.obresVisibles = this.obraService.estat().elements.filter(o => o.titol.toLocaleLowerCase().includes(text) && (f.categoria === undefined || o.categoria === f.categoria))
-    if (this.obresVisibles && !this.obresVisibles.some(o => o === this.obraSeleccionada)) this.obraSeleccionada = undefined;
   }
 
   selecciona(obra: ObraCataleg) {
