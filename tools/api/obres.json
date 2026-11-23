@@ -1,0 +1,84 @@
+{
+    "obres": [
+        {
+            "id": 0,
+            "titol": "L'Òpera de Tres Rals",
+            "descripcio": "Escrita al Berlín d’entreguerres, en ple ascens del nazisme, la popular 'òpera per als pobres' de Bertolt Brecht i Kurt Weill en col·laboració amb Elisabeth Hauptmann segueix funcionant avui com una crítica ferotge i lúcida al capitalisme.",
+            "categoria": "Musical",
+            "data": "2026-07-01",
+            "valoracio": 5
+        },
+        {
+            "id": 1,
+            "titol": "Bovary",
+            "descripcio": "El personatge de Flaubert, convertit en protagonista d'una òpera contemporània.",
+            "categoria": "Òpera",
+            "data": "2026-07-05",
+            "valoracio": 5
+        },
+        {
+            "id": 2,
+            "titol": "FACTORY  (Somni d'una nit d'estiu)",
+            "descripcio": "La comèdia més màgica de William Shakespeare traslladada a la FACTORY d’Andy Warhol.",
+            "categoria": "Teatre",
+            "data": "2026-07-09",
+            "valoracio": 2
+        },
+        {
+            "id": 3,
+            "titol": "Ricard de 3r",
+            "descripcio": "Aquesta és la historia d’en Ricard, un adolescent tímid i introspectiu que passa hores tancat al garatge de casa seva, alimentant la quotidianitat que ell percep com a excloent, hostil i depriment. Un dia, gràcies a un fet extraordinari que altera la monotonia, descobreix l’obra El Rei Ricard III de William Shakespeare. Els paral·lelismes que troba entre Gloucester i la seva pròpia vida el porten a obsessionar-se amb el personatge, que es converteix en l’exemple a seguir, ja que utilitza, com ell, la manipulació i la violència per intentar canviar el seu trist destí.",
+            "categoria": "Teatre",
+            "data": "2026-07-10",
+            "valoracio": 4
+        },
+        {
+            "id": 4,
+            "titol": "Ricard 111",
+            "descripcio": "Han passat onze anys. El nom de Ricard ja no ressona als passadissos d’un institut, sinó als d’una presó on compleix una condemna 'impossible': 111 anys. El noi que es va emmirallar en el monstre de Shakespeare intenta ara habitar una normalitat fràgil, feta de rutines, llibres i silencis.",
+            "categoria": "Teatre",
+            "data": "2026-07-15",
+            "valoracio": 5
+        },
+        {
+            "id": 5,
+            "titol": "A la colònia penitenciària",
+            "descripcio": "La decadència d’occident, explicada per una jove companyia barcelonina a partir de l’univers i els personatges d’un conte de Kafka. ",
+            "categoria": "Teatre",
+            "data": "2026-07-24",
+            "valoracio": 5
+        },
+        {
+            "id": 6,
+            "titol": "Aida",
+            "descripcio": "El Liceu inaugura temporada amb un repartiment excepcional liderat per Anna Netrebko i Anna Pirozzi en el paper d’Aida, juntament amb Yusif Eyvazov i Piotr Beczała com a Radamès. Una obertura de luxe per donar vida a una de les òperes més monumentals de Verdi, presentada en una producció impactant de l’artista iraniana Shirin Neshat, que converteix Aida en «un ritual visual en què la bellesa i el conflicte dialoguen constantment».",
+            "categoria": "Òpera",
+            "data": "2026-09-23",
+            "valoracio": 5
+        },
+        {
+            "id": 7,
+            "titol": "L'hostal de les tres Camèlies",
+            "descripcio": "En un hostal travessat per tensions i silencis, l’Andreu exerceix el seu domini sobre tres 'dones': la seva dona Magdalena; la seva mare, que ha perdut la parla; i la criada Camèlia que, com totes les anteriors, s'ha convertit en la seva amant. Però la Camèlia no es conforma amb el seu paper i aspira a convertir-se en mestressa.",
+            "categoria": "Teatre",
+            "data": "2026-12-03",
+            "valoracio": null
+        },
+        {
+            "id": 8,
+            "titol": "Grans Bardísses",
+            "descripcio": "Amb Grans bardisses, Premi Quim Masó 2025, Llàtzer Garcia aconsegueix convertir el dolor i la pèrdua en ficció. Una ficció sensible i honesta, profundament humana.",
+            "categoria": "Teatre",
+            "data": "2027-03-18",
+            "valoracio": null
+        },
+        {
+            "id": 9,
+            "titol": "La Mare Coratge i els seus fills",
+            "descripcio": "Durant la Guerra dels Trenta Anys, Anna Fierling, la Mare Coratge, recorre els camps de batalla d’Europa amb el seu carro de mercaderies. Intenta sobreviure enmig del conflicte mentre tira endavant els seus tres fills.",
+            "categoria": "Teatre",
+            "data": "2027-05-06",
+            "valoracio": null
+        }
+    ]
+}
