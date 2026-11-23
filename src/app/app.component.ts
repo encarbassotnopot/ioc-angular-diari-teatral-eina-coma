@@ -4,7 +4,7 @@ import { OBRES } from './mocks/obres.mock';
 import { LlistaObresComponent } from './components/llista-obres/llista-obres.component';
 import { FiltreObresComponent } from './components/filtre-obres/filtre-obres.component';
 import { CategoriaObra, ObraCataleg } from './models/obra.model';
-import { ObraService } from './services/obra.service';
+import { CriterisCerca, ObraService } from './services/obra.service';
 
 @Component({
   imports: [RouterOutlet, LlistaObresComponent, FiltreObresComponent],
@@ -24,6 +24,9 @@ export class App {
   }
   reintentar(): void {
     this.obraService.reintentar();
+  }
+  onCerca(criteris: CriterisCerca): void {
+    this.obraService.cercar(criteris);
   }
 
   aplicarFiltres = (f: { text: string, categoria?: CategoriaObra }) => {

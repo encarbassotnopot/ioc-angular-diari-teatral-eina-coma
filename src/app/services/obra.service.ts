@@ -7,7 +7,7 @@ import { ObraApiResponse, ObraCataleg, EstatObres, NovaObra } from '../models/ob
 import { environment } from '../../environments/environment';
 
 export interface CriterisCerca {
-  terme: string;
+  text: string;
   categoria: string;
 }
 
@@ -19,7 +19,7 @@ export class ObraService {
   // Flux de criteris: cada cerca nova s'emet aquí.
   // Subject (no BehaviorSubject): no volem cap emissió inicial automàtica;
   // la primera petició la dispara el component amb carregarTot()
-  private readonly criterisInicials: CriterisCerca = { terme: '', categoria: '' };
+  private readonly criterisInicials: CriterisCerca = { text: '', categoria: '' };
   private readonly criteris$ = new Subject<CriterisCerca>();
   private darrersCriteris = this.criterisInicials;
 
@@ -53,7 +53,7 @@ export class ObraService {
   /** Emet criteris nous: el flux del constructor fa la petició */
   cercar(criteris: CriterisCerca): void {
     this.criteris$.next({
-      terme: criteris.terme.trim(),
+      text: criteris.text.trim(),
       categoria: criteris.categoria,
     });
   }
@@ -73,7 +73,7 @@ export class ObraService {
 
   /** Nombre de resultats per a un terme (per al validador asíncron) */
   comptarResultats(terme: string): Observable<number> {
-    return this.obtenirElements({ terme, categoria: '' }).pipe(
+    return this.obtenirElements({ text: terme, categoria: '' }).pipe(
       map((elements) => elements.length)
     );
   }
@@ -86,7 +86,7 @@ export class ObraService {
 
     return this.http.get<ObraApiResponse[]>(this.apiUrl, { params }).pipe(
       map(adaptarObresApi),
-      map((elements) => this.filtrarPerTerme(elements, criteris.terme))
+      map((elements) => this.filtrarPerTerme(elements, criteris.text))
     );
   }
 

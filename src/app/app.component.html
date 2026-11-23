@@ -11,6 +11,7 @@
             <p>{{obraService.estat().error}}</p>
         }
         @case ('exit') {
+            <app-filtre-obres (cercaEnviada)="onCerca($event)"></app-filtre-obres>
             @if (obraService.estat().elements.length === 0) {<p role="status">No s'han trobat obres.</p>}
             @else {
                 <p role="status">{{obraService.estat().elements.length}} resultats trobats</p>
