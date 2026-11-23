@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Obra } from '../../models/obra.model';
+import { ObraCataleg } from '../../models/obra.model';
 import { EtiquetaCategoriaComponent } from '../etiqueta-categoria/etiqueta-categoria.component';
 import { DatePipe } from '@angular/common';
 
@@ -10,7 +10,7 @@ import { DatePipe } from '@angular/common';
   templateUrl: './targeta-obra.component.html',
 })
 export class TargetaObraComponent {
-  @Input({required: true}) obra!: Obra;
+  @Input({required: true}) obra!: ObraCataleg;
   @Input() seleccionada = false;
-  @Output() seleccionar = new EventEmitter<Obra>();
+  @Output() seleccionar = new EventEmitter<ObraCataleg>();
 }

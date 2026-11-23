@@ -1,6 +1,6 @@
-import { Obra } from "../models/obra.model";
+import { ObraCataleg } from "../models/obra.model";
 
-export const OBRES: Obra[] = [
+export const OBRES: ObraCataleg[] = [
     {
         id: 0,
         titol: "L'Òpera de Tres Rals",

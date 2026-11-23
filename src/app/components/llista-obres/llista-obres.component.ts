@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Obra } from '../../models/obra.model';
+import { ObraCataleg } from '../../models/obra.model';
 import { TargetaObraComponent } from '../targeta-obra/targeta-obra.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { TargetaObraComponent } from '../targeta-obra/targeta-obra.component';
 })
 
 export class LlistaObresComponent {
-  @Input({required: true}) obres!: Obra[];
-  @Input() obraSeleccionada?: Obra;
-  @Output() seleccionar = new EventEmitter<Obra>();
+  @Input({required: true}) obres!: ObraCataleg[];
+  @Input() obraSeleccionada?: ObraCataleg;
+  @Output() seleccionar = new EventEmitter<ObraCataleg>();
 }

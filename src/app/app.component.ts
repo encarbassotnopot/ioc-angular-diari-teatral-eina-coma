@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { OBRES } from './mocks/obres.mock';
 import { LlistaObresComponent } from './components/llista-obres/llista-obres.component';
 import { FiltreObresComponent } from './components/filtre-obres/filtre-obres.component';
-import { CategoriaObra, Obra } from './models/obra.model';
+import { CategoriaObra, ObraCataleg } from './models/obra.model';
 
 @Component({
   imports: [RouterOutlet, LlistaObresComponent, FiltreObresComponent],
@@ -14,7 +14,7 @@ import { CategoriaObra, Obra } from './models/obra.model';
 export class App {
 
   obresVisibles = [...OBRES];
-  obraSeleccionada?: Obra;
+  obraSeleccionada?: ObraCataleg;
 
   aplicarFiltres = (f: {text: string, categoria?: CategoriaObra}) => {
     const text = f.text.trim().toLocaleLowerCase()
@@ -22,7 +22,7 @@ export class App {
     if (this.obresVisibles && !this.obresVisibles.some(o => o === this.obraSeleccionada)) this.obraSeleccionada = undefined;
   }
 
-  selecciona(obra: Obra) {
+  selecciona(obra: ObraCataleg) {
     this.obraSeleccionada = obra;
   }
 }
