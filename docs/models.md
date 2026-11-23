@@ -34,6 +34,17 @@ export interface ObraApiResponse {
 }
 ```
 
+## Comparativa
+| Camp | `ObraCataleg` | `ObraApiResponse` | Diferència |
+|---|---|---|---|
+| Id | `number` | `number` | Cap |
+| Títol | `string` | `string` | Cap |
+| Descripció | `string` | `string` | Cap |
+| Categoria | `CategoriaObra` | `string` | El model intern restringeix els valors |
+| Data | `Date` | `string` | Es converteix de text a `Date` |
+| Valoració | `number?` | `number?` | Cap |
+| Destacada | `esDestacada?: boolean` | `destacada?: boolean` | Canvia el nom del camp |
+
 ## Adaptadors
 
 ### adaptarObraApi()
@@ -51,3 +62,4 @@ Aplica `adaptarObraApi()` a un array d'elements.
 ### obraBuida()
 
 Retorna una obra amb valors per defecte per inicialitzar formularis.
+
